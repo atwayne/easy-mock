@@ -1,4 +1,11 @@
 {
-  "port": 9527,
-  "appName": "easy mock for ann"
+  "app": {
+    "port": 9527,
+    "name": "easy mock for Ann"
+  },
+
+  "routers": [
+    { "path": "/example", "data": "./data/example.json", "method": "get" },
+    { "path": "/post-example", "data": "./data/example.json", "method": "post" }
+  ]
 }

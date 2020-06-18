@@ -1,9 +1,9 @@
 const config = require("config");
 const app = require("./app");
 
-const port = config.get("port");
+const port = config.get("app.port");
 app.listen(
   port,
   () =>
-    console.info(`${config.get("appName")} started on http://locahost:${port}`) // eslint-disable-line no-console
+    console.info(`${config.get("app.name")} started on http://locahost:${port}`) // eslint-disable-line no-console
 );

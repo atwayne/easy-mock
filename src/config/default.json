@@ -4,7 +4,7 @@
     "name": "easy mock for Ann"
   },
 
-  "routers": [
+  "mocks": [
     { "path": "/example", "data": "./data/example.json", "method": "get" },
     { "path": "/post-example", "data": "./data/example.json", "method": "post" }
   ],

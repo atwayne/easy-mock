@@ -4,14 +4,14 @@
   "description": "a node.js application that mocks api based on configuration",
   "main": "src/server.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node ./src/server.js"
   },
   "author": "Wayne",
   "license": "MIT",
   "dependencies": {
     "@koa/cors": "^3.1.0",
     "@koa/router": "^9.0.1",
-    "config": "^3.3.1",
     "koa": "^2.12.1",
     "koa-proxy": "^1.0.0-alpha.3"
   }

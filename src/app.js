@@ -1,8 +1,16 @@
 const Koa = require("koa");
 const Router = require("@koa/router");
+const cors = require("@koa/cors");
+
 const config = require("config");
 
 const app = new Koa();
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
 const router = new Router();
 
 const mocks = config.get("routers");

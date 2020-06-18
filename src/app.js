@@ -3,6 +3,7 @@ const Router = require("@koa/router");
 const cors = require("@koa/cors");
 
 const config = require("config");
+const proxy = require("koa-proxy");
 
 const app = new Koa();
 app.use(
@@ -23,5 +24,11 @@ mocks.forEach((mock) => {
 });
 
 app.use(router.routes()).use(router.allowedMethods());
+
+const proxy_host = config.get("proxy");
+app.use(proxy({
+  host: proxy_host,
+  jar: true,
+}));
 
 module.exports = app;

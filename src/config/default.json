@@ -7,5 +7,7 @@
   "routers": [
     { "path": "/example", "data": "./data/example.json", "method": "get" },
     { "path": "/post-example", "data": "./data/example.json", "method": "post" }
-  ]
+  ],
+
+  "proxy": "http://localhost:9528"
 }

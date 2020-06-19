@@ -9,6 +9,10 @@
     "routes",
     "proxy"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/atwayne/easy-mock.git"
+  },
   "scripts": {
     "test": "test",
     "start": "node ./src/server.js"

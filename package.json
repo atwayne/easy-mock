@@ -1,5 +1,5 @@
 {
-  "name": "easy-mock",
+  "name": "node-easy-mock",
   "version": "0.0.1",
   "description": "a node.js application that mocks api based on configuration",
   "main": "src/server.js",

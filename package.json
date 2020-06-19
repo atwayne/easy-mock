@@ -3,11 +3,17 @@
   "version": "0.0.1",
   "description": "a node.js application that mocks api based on configuration",
   "main": "src/server.js",
+  "keywords": [
+    "server",
+    "mock",
+    "routes",
+    "proxy"
+  ],
   "scripts": {
     "test": "test",
     "start": "node ./src/server.js"
   },
-  "author": "Wayne",
+  "author": "Wayne <nkgailei@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@koa/cors": "^3.1.0",

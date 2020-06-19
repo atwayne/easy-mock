@@ -31,3 +31,8 @@ a node.js application that mocks api based on configuration
 4.  (optional) modify `proxy` to the hostname of the proxy server, which will handle unrouted requests
 5.  update `routers` for mocks
 6.  `npm start`
+
+## Development plan
+
+-  creat a webpage so user can configure in browser
+-  reload routers without restarting the api server

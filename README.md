@@ -1,3 +1,28 @@
+## Introduction
+
+a node.js application that mocks api based on configuration
+
+## Features
+
+1.  mock response
+
+    configure routers so the api respond with provide json file, for example:
+
+    ```
+    { "path": "/example", "data": "./data/example.json", "method": "get" }
+    ```
+
+    then a request `GET /example` will get response with content of the file `./data/example.json`
+
+
+2.  default proxy
+
+    for all requests to a path that has not been defined in previous configuration, the api will work as a proxy and redirect the request to a specificed proxy server.
+
+    for example: given that `"proxy": "http://localhost:9528"` has been set, and path `/api/element/1` has not been mocked, then a request `GET /api/element/1` will be proxied to `http://localhost:9528/api/element/1` and get response from the proxy server.
+
+3.  cors allowed for all origins
+
 ## Usage
 
 1.  `npm install`

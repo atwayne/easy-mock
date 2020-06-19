@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const app = require("./app");
 
 const { port, name } = require("./config/default.json").app;

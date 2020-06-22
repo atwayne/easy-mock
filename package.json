@@ -26,7 +26,7 @@
     "@koa/cors": "^3.1.0",
     "koa": "^2.12.1",
     "koa-logger": "^3.2.1",
-    "koa-proxy": "^1.0.0-alpha.3",
+    "koa-proxies": "^0.11.0",
     "koa-static": "^5.0.0",
     "opn": "^6.0.0",
     "path-to-regexp": "^6.1.0"

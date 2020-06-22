@@ -8,5 +8,5 @@
     { "path": "/post-example", "data": "./data/example.json", "method": "post" }
   ],
 
-  "proxy": "https://httpbin.org/"
+  "proxy": "http://localhost:5000/"
 }

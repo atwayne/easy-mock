@@ -1,7 +1,7 @@
 const Koa = require("koa");
 const cors = require("@koa/cors");
 
-const proxy = require("koa-proxy");
+const proxy = require("koa-proxies");
 const logger = require("koa-logger");
 
 const app = new Koa();
@@ -20,10 +20,12 @@ app.use(logger());
 app.use(mockRouters);
 
 const proxyHost = require("./config/default.json").proxy;
+
 app.use(
-  proxy({
-    host: proxyHost,
-    jar: true,
+  proxy("/", {
+    target: proxyHost,
+    changeOrigin: false,
+    logs: true,
   })
 );
 

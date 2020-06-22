@@ -1,7 +1,6 @@
 {
   "app": {
-    "port": 3000,
-    "name": "easy mock for Ann"
+    "port": 3000
   },
 
   "mocks": [

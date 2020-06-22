@@ -1,20 +1,20 @@
 #!/usr/bin/env node
-const app = require("./app");
-const portal = require("./portal");
-const config = require("./config/default.json");
-
 const opn = require("opn");
+
+const config = require("./config/default.json");
+const api = require("./api");
+const portal = require("./portal");
+
 
 const {
   app: { port, name },
   proxy,
 } = config;
 
-const instance = app.listen(port, (args) => {
+api.listen(port, (args) => {
   console.info(
-    `${name} started on http://locahost:${port}. default proxy:${proxy}`
+    `API started on http://locahost:${port}. default proxy:${proxy}`
   );
-  console.log(instance.address().port);
 });
 
 // portal will start at a random port

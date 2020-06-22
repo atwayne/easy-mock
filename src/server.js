@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 const app = require("./app");
+const config = require("./config/default.json");
 
-const { port, name } = require("./config/default.json").app;
+const {
+  app: { port, name },
+  proxy,
+} = config;
 
-app.listen(
-  port,
-  () => console.info(`${name} started on http://locahost:${port}`) // eslint-disable-line no-console
+app.listen(port, () =>
+  console.info(
+    `${name} started on http://locahost:${port}. default proxy:${proxy}`
+  )
 );

@@ -1,36 +1,28 @@
 const Koa = require("koa");
-const Router = require("@koa/router");
 const cors = require("@koa/cors");
 
 const proxy = require("koa-proxy");
-const logger = require('koa-logger');
+const logger = require("koa-logger");
 
 const app = new Koa();
+const mockRouters = require("./routers/mocks");
+// enable cors
 app.use(
   cors({
     origin: "*",
   })
 );
 
+// console logger
 app.use(logger());
 
-const router = new Router();
+// dynamic router for mocks
+app.use(mockRouters);
 
-const config = require("./config/default.json");
-const { mocks } = config;
-
-mocks.forEach((mock) => {
-  const { path, data, method } = mock;
-  router[method || "get"](path, (ctx) => {
-    ctx.body = require(data);
-  });
-});
-
-app.use(router.routes()).use(router.allowedMethods());
-
+const proxyHost = require("./config/default.json").proxy;
 app.use(
   proxy({
-    host: config.proxy,
+    host: proxyHost,
     jar: true,
   })
 );

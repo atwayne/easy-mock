@@ -35,4 +35,5 @@ a node.js application that mocks api based on configuration
 ## Development plan
 
 -  [ ]   creat a webpage so user can configure in browser
+-  [ ]   create global executables
 -  [X]  ~~reload routers without restarting the api server~~

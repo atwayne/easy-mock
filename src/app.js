@@ -3,6 +3,7 @@ const Router = require("@koa/router");
 const cors = require("@koa/cors");
 
 const proxy = require("koa-proxy");
+const logger = require('koa-logger');
 
 const app = new Koa();
 app.use(
@@ -10,6 +11,8 @@ app.use(
     origin: "*",
   })
 );
+
+app.use(logger());
 
 const router = new Router();
 
